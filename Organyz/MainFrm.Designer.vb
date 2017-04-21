@@ -30,22 +30,26 @@ Partial Class MainFrm
         '
         'folderPathTBox
         '
+        Me.folderPathTBox.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.folderPathTBox.Location = New System.Drawing.Point(102, 83)
         Me.folderPathTBox.Name = "folderPathTBox"
-        Me.folderPathTBox.Size = New System.Drawing.Size(319, 20)
+        Me.folderPathTBox.Size = New System.Drawing.Size(319, 23)
         Me.folderPathTBox.TabIndex = 0
+        Me.folderPathTBox.Text = "C:\Users\admin\Desktop\Test Folder"
         '
         'setFolderPathBut
         '
-        Me.setFolderPathBut.Location = New System.Drawing.Point(427, 81)
+        Me.setFolderPathBut.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.setFolderPathBut.Location = New System.Drawing.Point(427, 82)
         Me.setFolderPathBut.Name = "setFolderPathBut"
-        Me.setFolderPathBut.Size = New System.Drawing.Size(106, 22)
+        Me.setFolderPathBut.Size = New System.Drawing.Size(106, 25)
         Me.setFolderPathBut.TabIndex = 1
         Me.setFolderPathBut.Text = "Choose Directory"
         Me.setFolderPathBut.UseVisualStyleBackColor = True
         '
         'extractFilesBut
         '
+        Me.extractFilesBut.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.extractFilesBut.Location = New System.Drawing.Point(271, 152)
         Me.extractFilesBut.Name = "extractFilesBut"
         Me.extractFilesBut.Size = New System.Drawing.Size(75, 23)
