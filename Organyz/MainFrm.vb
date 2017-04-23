@@ -122,6 +122,10 @@ Public Class MainFrm
     End Function
 
     Private Sub MainFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        devLinkLBL.Links.Add(0, 9, "www.thecodepost.org")
+    End Sub
 
+    Private Sub devLinkLBL_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles devLinkLBL.LinkClicked
+        System.Diagnostics.Process.Start(e.Link.LinkData.ToString)
     End Sub
 End Class
