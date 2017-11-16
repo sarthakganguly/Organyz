@@ -2,55 +2,6 @@
 
 Public Class MainFrm
 
-    Private Function setInitFileExtensions() As List(Of String)
-        Dim fileExtGlobal As New List(Of String)
-#Region "         Video"
-        fileExtGlobal.Add("mp4")
-        fileExtGlobal.Add("mkv")
-#End Region
-#Region "         Audio"
-        fileExtGlobal.Add("mp3")
-#End Region
-#Region "         Images"
-        fileExtGlobal.Add("jpg")
-        fileExtGlobal.Add("gif")
-        fileExtGlobal.Add("png")
-        fileExtGlobal.Add("bmp")
-#End Region
-#Region "         Text"
-        fileExtGlobal.Add("txt")
-#End Region
-#Region "         Disk Images"
-        fileExtGlobal.Add("img")
-        fileExtGlobal.Add("iso")
-#End Region
-#Region "         Archives"
-        fileExtGlobal.Add("zip")
-        fileExtGlobal.Add("rar")
-        fileExtGlobal.Add("tar")
-        fileExtGlobal.Add("gz")
-#End Region
-#Region "         Documents"
-        fileExtGlobal.Add("pdf")
-        fileExtGlobal.Add("docx")
-        fileExtGlobal.Add("doc")
-#End Region
-#Region "         Spreadsheets"
-        fileExtGlobal.Add("xlsx")
-        fileExtGlobal.Add("xls")
-#End Region
-#Region "         Presentations"
-        fileExtGlobal.Add("pptx")
-        fileExtGlobal.Add("ppt")
-#End Region
-#Region "         Others"
-
-#End Region
-        fileExtGlobal.Add("exe")
-        fileExtGlobal.Add("msi")
-        Return fileExtGlobal
-    End Function
-
     Private Sub setFolderPathBut_Click(sender As Object, e As EventArgs) Handles setFolderPathBut.Click
         Dim dlgResult = openFolderDlg.ShowDialog()
         folderPathTBox.Text = openFolderDlg.SelectedPath
@@ -68,22 +19,23 @@ Public Class MainFrm
             ' for example, jpg, png etc should be stored in a Pictures Folder
             ' p - created just to make things simple, a little extra space won't
             ' matter much in the end :) It will get deallocated after this sub
-            If setInitFileExtensions.Contains(ext) Then
-                Dim str = extToCategory(ext)
-                Dim p = path + "\" + str + "\" + file.Substring(file.LastIndexOf("\") + 1)
+            'If setInitFileExtensions.Contains(ext) Then
+            Dim str = extToCategory(ext)
+            Dim p = path + "\" + str + "\" + file.Substring(file.LastIndexOf("\") + 1)
 
-                My.Computer.FileSystem.MoveFile(file, p)
+            My.Computer.FileSystem.MoveFile(file, p)
 
-            End If
+            'End If
 
         Next
+
     End Sub
 
     Private Function extToCategory(ByVal ext As String)
         Dim catList As New List(Of String)
         Dim catType As String = ""
         Select Case ext
-            Case "txt"
+            Case "txt", "TXT"
                 catType = "Text Files"
             Case "xlsx", "xls"
                 catType = "Spreadsheets"
