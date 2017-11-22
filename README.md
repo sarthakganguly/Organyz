@@ -12,6 +12,8 @@ In short, it simplifies and automates the organizing process. It saves time. And
 
 Try Organyz now. And let me know if you wish to join.
 
-Thank,
+Thanks,
+
 Sarthak
+
 Developer
