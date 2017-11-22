@@ -37,6 +37,7 @@ Partial Class MainFrm
         Me.folderPathTBox.Name = "folderPathTBox"
         Me.folderPathTBox.Size = New System.Drawing.Size(308, 23)
         Me.folderPathTBox.TabIndex = 0
+        Me.folderPathTBox.Text = "C:\Users\admin\Desktop"
         '
         'setFolderPathBut
         '
