@@ -28,6 +28,7 @@ Partial Class MainFrm
         Me.extractFilesBut = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.devLinkLBL = New System.Windows.Forms.LinkLabel()
+        Me.loadExtBut = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'folderPathTBox
@@ -82,11 +83,22 @@ Partial Class MainFrm
         Me.devLinkLBL.TabStop = True
         Me.devLinkLBL.Text = "Developer"
         '
+        'loadExtBut
+        '
+        Me.loadExtBut.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadExtBut.Location = New System.Drawing.Point(326, 68)
+        Me.loadExtBut.Name = "loadExtBut"
+        Me.loadExtBut.Size = New System.Drawing.Size(121, 27)
+        Me.loadExtBut.TabIndex = 5
+        Me.loadExtBut.Text = "Load Extensions"
+        Me.loadExtBut.UseVisualStyleBackColor = True
+        '
         'MainFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 162)
+        Me.Controls.Add(Me.loadExtBut)
         Me.Controls.Add(Me.devLinkLBL)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.extractFilesBut)
@@ -107,4 +119,5 @@ Partial Class MainFrm
     Friend WithEvents extractFilesBut As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents devLinkLBL As LinkLabel
+    Friend WithEvents loadExtBut As Button
 End Class
